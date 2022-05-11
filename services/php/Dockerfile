@@ -37,5 +37,7 @@ ENV COMPOSER_HOME=/tmp/composer
 # php image's www-data user uid & gid are 82, change them to 1000 (primary user)
 RUN apk --no-cache add shadow && usermod -u 1000 www-data && groupmod -g 1000 www-data
 
+#快速安装扩展 & RUN install-php-extensions 扩展名
+RUN install-php-extensions rdkafka
 
 WORKDIR /www
