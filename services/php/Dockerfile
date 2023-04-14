@@ -40,4 +40,5 @@ RUN apk --no-cache add shadow && usermod -u 1000 www-data && groupmod -g 1000 ww
 #快速安装扩展 & RUN install-php-extensions 扩展名
 RUN install-php-extensions rdkafka
 
+
 WORKDIR /www
